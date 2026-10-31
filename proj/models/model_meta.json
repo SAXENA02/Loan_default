@@ -1,0 +1,75 @@
+{
+  "model_name": "xgboost",
+  "model_version": "20261028-154251",
+  "features": [
+    "RevolvingUtilizationOfUnsecuredLines",
+    "age",
+    "NumberOfTime30-59DaysPastDueNotWorse",
+    "DebtRatio",
+    "MonthlyIncome",
+    "NumberOfOpenCreditLinesAndLoans",
+    "NumberOfTimes90DaysLate",
+    "NumberRealEstateLoansOrLines",
+    "NumberOfTime60-89DaysPastDueNotWorse",
+    "NumberOfDependents",
+    "MonthlyIncome_was_missing"
+  ],
+  "threshold": 0.24,
+  "risk_tiers": {
+    "low_below": 0.1,
+    "high_above": 0.24
+  },
+  "candidates": {
+    "logistic_regression": {
+      "cv_auc_mean": 0.8189213886441451,
+      "cv_auc_std": 0.00782311269799033,
+      "test_auc": 0.8117372878671129,
+      "test_pr_auc": 0.2914857609074487
+    },
+    "random_forest": {
+      "cv_auc_mean": 0.8641030544494532,
+      "cv_auc_std": 0.006970389885813398,
+      "test_auc": 0.8592040398838515,
+      "test_pr_auc": 0.3992883688188038
+    },
+    "xgboost": {
+      "cv_auc_mean": 0.8664317434789952,
+      "cv_auc_std": 0.007006421192477767,
+      "test_auc": 0.8628088491327769,
+      "test_pr_auc": 0.39992073016833074
+    }
+  },
+  "test_metrics_at_threshold": {
+    "precision": 0.42799799297541397,
+    "recall": 0.4728381374722838,
+    "f1": 0.4493020805899394,
+    "tn": 24056,
+    "fp": 1140,
+    "fn": 951,
+    "tp": 853
+  },
+  "simulated_npa": {
+    "defaulted_value": 34903200.0,
+    "caught_value": 14658300.0,
+    "npa_reduction_pct": 42.0,
+    "good_loans_rejected_value": 20034800.0,
+    "note": "loan_amount is synthetic; this is a simulation, not real savings."
+  },
+  "preprocessing": {
+    "income_median_by_age_decile": {
+      "20": 2560.0,
+      "30": 4666.0,
+      "40": 6000.0,
+      "50": 6341.0,
+      "60": 5900.0,
+      "70": 4666.0,
+      "80": 4200.0,
+      "90": 4334.0,
+      "100": 2274.5
+    },
+    "income_median_overall": 5400.0,
+    "cap_utilization": 1.366278897130018,
+    "cap_debt_ratio": 6186.020000000019,
+    "cap_past_due": 20
+  }
+}

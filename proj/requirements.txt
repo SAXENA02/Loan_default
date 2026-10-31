@@ -1,0 +1,20 @@
+# Pinned to the versions this project was tested with
+pandas
+numpy
+scipy
+matplotlib
+scikit-learn==1.8.0
+xgboost==3.4.1
+shap==0.52.0
+joblib
+fastapi==0.141.1
+uvicorn[standard]
+sqlalchemy==2.1.1
+psycopg2-binary
+evidently==0.7.23
+mlflow==3.16.1
+pytest
+httpx
+streamlit>=1.50
+requests
+plotly>=5.24

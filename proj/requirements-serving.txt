@@ -1,0 +1,11 @@
+# Slim runtime set for the API container (no training/monitoring extras)
+pandas
+numpy
+scikit-learn==1.8.0
+xgboost==3.4.1
+shap==0.52.0
+joblib
+fastapi==0.141.1
+uvicorn[standard]
+sqlalchemy==2.1.1
+psycopg2-binary

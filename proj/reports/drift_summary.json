@@ -1,0 +1,111 @@
+{
+  "current_file": "data/drift_batch.csv",
+  "n_reference": 10000,
+  "n_current": 14999,
+  "features_moderate_or_major": [
+    "MonthlyIncome",
+    "RevolvingUtilizationOfUnsecuredLines"
+  ],
+  "table": [
+    {
+      "feature": "MonthlyIncome",
+      "ks_stat": 0.1654,
+      "ks_p": 6.412065814925398e-144,
+      "psi": 0.128,
+      "ref_mean": 6337.628,
+      "cur_mean": 7017.989,
+      "status": "moderate"
+    },
+    {
+      "feature": "RevolvingUtilizationOfUnsecuredLines",
+      "ks_stat": 0.1104,
+      "ks_p": 4.0505908806360586e-64,
+      "psi": 0.0189,
+      "ref_mean": 0.32,
+      "cur_mean": 0.355,
+      "status": "moderate"
+    },
+    {
+      "feature": "age",
+      "ks_stat": 0.0101,
+      "ks_p": 0.5643722236481359,
+      "psi": 0.0035,
+      "ref_mean": 52.398,
+      "cur_mean": 52.335,
+      "status": "stable"
+    },
+    {
+      "feature": "NumberOfOpenCreditLinesAndLoans",
+      "ks_stat": 0.0086,
+      "ks_p": 0.7595882942943798,
+      "psi": 0.002,
+      "ref_mean": 8.413,
+      "cur_mean": 8.507,
+      "status": "stable"
+    },
+    {
+      "feature": "DebtRatio",
+      "ks_stat": 0.0096,
+      "ks_p": 0.6297367806209471,
+      "psi": 0.001,
+      "ref_mean": 321.168,
+      "cur_mean": 319.986,
+      "status": "stable"
+    },
+    {
+      "feature": "NumberRealEstateLoansOrLines",
+      "ks_stat": 0.0096,
+      "ks_p": 0.6288305446118424,
+      "psi": 0.0005,
+      "ref_mean": 1.011,
+      "cur_mean": 1.016,
+      "status": "stable"
+    },
+    {
+      "feature": "NumberOfDependents",
+      "ks_stat": 0.0054,
+      "ks_p": 0.9941985168143617,
+      "psi": 0.0002,
+      "ref_mean": 0.741,
+      "cur_mean": 0.73,
+      "status": "stable"
+    },
+    {
+      "feature": "NumberOfTime30-59DaysPastDueNotWorse",
+      "ks_stat": 0.0038,
+      "ks_p": 0.999995057253819,
+      "psi": 0.0001,
+      "ref_mean": 0.286,
+      "cur_mean": 0.279,
+      "status": "stable"
+    },
+    {
+      "feature": "NumberOfTimes90DaysLate",
+      "ks_stat": 0.0013,
+      "ks_p": 1.0,
+      "psi": 0.0,
+      "ref_mean": 0.135,
+      "cur_mean": 0.125,
+      "status": "stable"
+    },
+    {
+      "feature": "NumberOfTime60-89DaysPastDueNotWorse",
+      "ks_stat": 0.0021,
+      "ks_p": 1.0,
+      "psi": 0.0,
+      "ref_mean": 0.105,
+      "cur_mean": 0.096,
+      "status": "stable"
+    },
+    {
+      "feature": "MonthlyIncome_was_missing",
+      "ks_stat": 0.0004,
+      "ks_p": 1.0,
+      "psi": 0.0,
+      "ref_mean": 0.197,
+      "cur_mean": 0.197,
+      "status": "stable"
+    }
+  ],
+  "evidently_html": "saved reports/drift_report.html"
+}

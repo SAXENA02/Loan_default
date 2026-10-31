@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+WORKDIR /srv
+RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 && rm -rf /var/lib/apt/lists/*
+COPY requirements-serving.txt .
+RUN pip install --no-cache-dir -r requirements-serving.txt "streamlit>=1.50" "plotly>=5.24" scipy matplotlib
+COPY src/ src/
+COPY ui/ ui/
+COPY .streamlit/ .streamlit/
+COPY streamlit_app.py .
+COPY models/ models/
+COPY data/ data/
+COPY reports/ reports/
+RUN useradd -m appuser && chown -R appuser /srv
+USER appuser
+EXPOSE 8501
+CMD ["streamlit", "run", "streamlit_app.py", "--server.address=0.0.0.0", "--server.port=8501"]
